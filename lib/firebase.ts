@@ -87,12 +87,10 @@ const initFirebase = () => {
         
         try {
             analytics = getAnalytics(app);
-            console.log("Firebase Analytics initialized successfully");
         } catch (analyticsError) {
             console.error('Analytics could not be initialized:', analyticsError);
         }
         
-        console.log("Firebase initialized successfully");
     } catch (error) {
         console.error("Error initializing Firebase:", error);
     }
@@ -105,7 +103,6 @@ export const trackEvent = (eventName: string, eventParams?: Record<string, any>)
     }
 
     if (!analytics) {
-        console.log('Analytics not initialized, initializing Firebase...');
         initFirebase();
         if (!analytics) {
             console.error('Failed to initialize analytics after attempt');
@@ -114,9 +111,8 @@ export const trackEvent = (eventName: string, eventParams?: Record<string, any>)
 
     try {
         if (analytics) {
-            console.log(`Tracking event: ${eventName}`, eventParams);
             firebaseLogEvent(analytics, eventName, eventParams);
-            console.log(`Event ${eventName} tracked successfully`);
+
             return true;
         } else {
             console.warn('Firebase Analytics not available', eventName, eventParams);
