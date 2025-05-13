@@ -1,7 +1,7 @@
 # Bet App - Spor Bahis Uygulaması
 
 Next.js ve TypeScript ile geliştirilmiş modern bir spor bahis uygulaması. Kullanıcılar için spor bahis oranları, etkinlikler ve gerçek zamanlı güncellemeler sunar.
-Uygulamayı kullanabilmek için [burayı](bets-app.netlify.app) ziyaret edebilirsiniz.
+Uygulamayı kullanabilmek için [burayı](https://bets-app.netlify.app) ziyaret edebilirsiniz.
 
 ## Özellikler
 
